@@ -94,7 +94,6 @@ fn main() {
         ('+', '}'),
     ]);
     // Capital letters represent special cases
-    //TODO: add line breaks
 
     //the decode_table code was ai generated, i probably could've figured it out myself but i got lazy :(
     let decode_table: HashMap<char, char> = encode_table
@@ -118,13 +117,6 @@ fn main() {
 
     //remove the cipher mode to leave us with an untouched sentence
     sentence.remove(0);
-
-    // let sentence = std::fs::read_to_string("lorem.txt");
-
-    // dont want to deal with uppercase so we to_lowercase everything
-    // let sentence: Vec<String> = sentence.iter().map(|word| word.to_lowercase()).collect();
-    // nevermind it just ignores it for you and this also caused decoding bugs lmao
-
 
     if cipher_mode == "decode" {
         println!("Decoding");
